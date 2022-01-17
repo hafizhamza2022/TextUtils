@@ -1,0 +1,269 @@
+React Js
+
+React Js aj ki tareekh me sab se zyada single page application banane wali library hai . single page application use kehte hai jo sirf aik dafa load hoti hai.React Js Component base website hoti hai joke tukro tukro me website ko banati hai . aik component ko hum aik se zyada bar use krsakte hai dosri website me bhi  
+
+1- React Developer Tools Chrom extension:
+2- ES7 React/Redux/GraphQL/React-Native snippets vs code extension
+3- Bracket Pair Colorizer vs code extension
+4- Auto Rename Tag vs code extension
+
+Q) What is NPM?
+ NPM aik package manager hai .
+ npm hamare node js me package ko install krne k lye madad krta hai.
+
+
+1- Create React App:
+ yh aik package hota hai create react app ko install krne ke lye react app k basic folder structure ko lane k lye .
+React js ko install krne k lye hum npx use krte hai. 
+
+Q) How to globally install React App ?
+
+Ans)$ npx create-react-app my-app
+ 
+Q) What is NPX?
+
+Ans) NPX create react app ko install krne k lye use hota hai. npx create-react-app ko bina download kye means k package ko bina download kye usko sirf ap aik bar use krna chaho to ap krsakte ho.
+
+Q) Why Component Base React?
+Ans) For example apko aik website banani hai react pe to ap uska aik header ka component banadoge aik main content ka component banadoge aik sidebar ka component banadoge 
+aur aik footer ka component banadoge. react me component ka sab se bara advantage hume yh milta hai hai k hum bar bar us component ko use krsakte hai .
+
+2- Folder Structure in React Js:
+
+a) node_modules k andar sare packages ate hai apke jo react app use krti hai.
+b) .gitignore yh apka git use krta hai jab ap project ko github p push krte ho . kya cheez push nh honi chahiye woh .gitignore k andar ati hai.
+c) package.json me woh sare packages joke node_modules me install hote hai .
+d) README.md aik basic readme data hai project ko kbhi bhi project ko github per push krhe ho to README ki jagah p kya dikhaya jai woh README.md me dikhaya jata hai.
+e)public folder index.html file aik html file hai isme ap apna code nh likhoge ap apna code src folder k andar yaha per sab se important jo file hai woh index.html hai jiske andar sari 
+rendering hogi 
+f) src folder ap apne React k component ko src k andar move krwaoge aur un components me ap props ko bhejoge.
+aur component ki state hogi. src k andar aik component hai APP.js yh aik component hai aur index.js hai woh hamara entry point hai index.js k andar apka APP wala component render krdo.
+
+Q) What is Component of Props and Component of States?
+
+Ans) a) Props kya hote hai . manlo humne aik template banai .  aik form component hai to component k andar jo details ap daloge woh props hai.
+
+b) States kya hote hai k aik component ki heading hamza hai aur content yh hai .
+
+Q) Ap React APP ko kis tarah se run krsakte ho 
+
+ANS) $ npm start apki react app run hojaegi
+
+Q) Is React JS a component class base or a function base ?
+
+Ans) Phle React class base component use krti thi lekn ab function base component use krti hai.
+
+
+Fisrt Component :
+
+App.js aesa Component hota hai jo hume direct application run hone p milta hai front pe.
+apne sare components hum src folder k andar banate hai .
+ 
+ App.js jo hai woh apki puri website hai 
+
+ Function Base Component :
+
+ Function base component kese likhte hai jsx me .
+ apko aik function likhna hai Bbracket lagake aur parenthesis k andar return krwana hai us function ko 
+ return me ap jo bhi krwate ho use kehte hai JSX .
+
+Q) What is JSX ?
+
+Ans  JSX aik javascript ka syntax extension hai jiske andar ap HTMl hi lkn iske andar ap javascript bhi dalsakte ho curly brackets k andar .
+yh JSX 90 percent HTML hi hai bus kuch hi changes hai dono k sytax me jese ap html element me class add krne k lye class keyword use krte ho .
+JSX me ap className use kroge qk class aik javascript ka reserve keyword hai. aur JSX camel case use krti hai 
+JSX me ap sirf aik tag return krte ho .
+agr apko do html element bhi use krne haina to React Fragment use kroge uske andar ap use krskte ho .
+
+$  <> </>
+
+JSX me ap variables bhi use krsakte ho kuch is tarah se {} curly brackets me ap variables use krsakte ho .
+
+$  let name = "Hamza";
+ function App(){
+     return(
+         <h1>Hello {name}</h1>
+     );
+ }
+
+JSX me apko jaha jaha javascript use krni hai ap use krsakte ho .
+babel compile krti hai JSX syntax me behine the scene  
+
+apne node_modules ko delete krdia use kya hoga apke sare packages delete hojaenge jo apne react app ko create krne k lye use kye hai .
+
+JSX syntax me apko HTMl k har tags ko close krna zaruri hai for example agr apne aik img ka tag use krna hai to img tag ko close krna bhi zaruri hai 
+warna react app apko error through krega . 
+
+$  <img src="" alt="" />
+
+Q) What is Props ? 
+
+Ans) Aik custom component ko me kuch bhej sakta hu joke woh use krsakti hai apne andar  
+
+jab hum custom components banate hai to hum src k andar components k andar banate hai . 
+components hamesha Capital later m banate hai Mtlb uska first later capital hoga . 
+for example : Navbar.js  , Header.js , Footer.js 
+
+react short snippets mjhe react function base component chahiye uske lye kya hoga (rfc)
+
+ab ap is component ko use  kese kroge App.js me 
+
+sab se phle top pe component ko import krwaoge 
+
+$    import Navbar from "./components/Navbar";
+
+uske bad jaha yh component use krna hai  waha p ap is tarah component ko call krwadoge 
+
+$    <Navbar />
+
+agr apko header m kuch change krna hai for example apko home page m aik header ka title aur links wagera alag rkhna hai .
+aur about page me  aik header ka title aur links wagera alg rkhna hai to ap props use krke change krsakte hai .
+
+props ise kehte hai aik component hai ab ap us component me cheezen pass krna chahte hai . variables me joke hum bataenge kya hoge .
+
+Q) What is PropType ?
+
+Ans) PropTypes m ap yh define krte hoke k ap component m koni type ke data ko bhej rhe hai manlo apne proptype me define krdiya k m title 
+m string bhejuga lekin apne title me string ki jagah number bhejdya to woh number to ajaega lekin console m apko error mil jaiga .
+
+use PropType 
+sab se phle to ap PropType ko import krwaoge top per 
+
+$     import PropTypes from "prop-types";  
+
+uske bad ap define kroge sab se last per jaha ap ka function close horha hoga waha per kuch is tarah se 
+
+$  Navbar.propTypes = {
+  title: PropTypes.string,
+  aboutText: PropTypes.string,
+};
+
+
+
+aik hota hai default props agr ap default Props set krdoge to ap component me kuch na bhi pass kroto to as a default props set hojaega .
+
+$   Navbar.defaultProps = {
+  title: "Set TitleHere",
+  aboutText: "Set about text here",
+};
+
+lekin agr ap PropType me isRequired use krdoge aur ap component m pass nh krhe aur apka default proptypes bhi apke pas na set nh hogi to apko console me error miljaiga .
+agr ap ka default proptype set hogi to as a defaultProps ko target krke display krwadega aur apka error nh ayega .
+
+Q) What is State & Handling Evevnt ? 
+
+Ans) State aik component ko belong krti hai . useState 
+
+useState aik hook hota hai .
+
+Hooks new features hai react 16.8 version ka yh apko classbase component likhe bagair use state aur react k aur zyada features likhna allow krta hai .
+hooks apko bina class banaye hooks k features likhne me helpful hote hai .
+
+Q) what is useState ?
+
+Ans)    $   const [text, setText] = useState("Enter Text Here"); 
+
+useState ko agr ap is tarah use kroge to basically yh hoga yh jo text varibale hai yh set hojaen useState jo array return krega uske pehle parameter me 
+aur setText hojaega dosre parameter me ap ise useState ko hamesha apne function component k andar likhoge 
+ ap directly text value ko change nh krsakte yh wrong way hai .
+
+ap state ki value ko setText wale function se update krskte ho yh corect way hai 
+jab hu hume text ki value ko change krni hogi to hum setText use krenge .
+
+kya hota hai agr ap react me onchange ka event lagate ho to agr ap uski value ko change krte ho apka function ko chlta hai sath me apko us function me aik event object bhi mil jaiga 
+use ap as a parameter use krstke ho 
+
+Enable Dark Mode buttong Using useState Hook Set
+
+agr ap kisi bhi element per style{myStyle} 
+use krde to yh aik object kehlaiga
+ab yh object ap top per function k andar hi banaskte ho aur iske andar ap jo bhi properties use krenge woh apply hojaegi jis element per 
+yh object call huwa hai.
+
+style ko hum state variable banake iski value change krskte hai jo hmarai initial state hogi woh dark mode state hogi
+
+hum aik se zyada state bhi use krskte hai
+
+if else short syntax
+
+$  props.alert && 
+
+ yh code apko function k andar type krna prega yh check krega k agr props.alert null hai to code ko return nh krega agr null nh hai to code ko return krega next wale.
+
+    
+ $   document.title = "Text Utils - Light Mode";
+ 
+ yh code page ka jo title hai woh set krne k lye ap 
+ use krenge 
+
+React Router Setup:
+React Router me kya hota hai apki for example aik web application hai use ap use ap banane k lye header alag banate hai footer alag banate hai aur center me content wala structure alag
+bnate hai to ise kye hota hai har page me header alag call hota hai aur footer alag call hota hai to react me hum header ka aur footer ka component banake har jagah use krsakte hai 
+sirf center me content change hota hai . aur page refresh nh hota . 
+
+is command se ap React Router Dom ko install krenge .
+$ npm install react-router- dom 
+
+uske bad ap React Router Dom ko import krenge.
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+uske bad ap Routes ko <Router></Router> k andar use krenge warna woh apko error dega 
+
+Linkwise router banane k lye mtlb k ap kisi link pe click kre to usi page p ajen uske lye ap Link to ka use krenge.
+
+is tarah  se :
+
+$   <Link className="nav-link active" aria-current="page" to="/">
+      Home
+</Link>
+
+
+Free Building + Hosting React App on Github 
+
+1st step of react App on connect on firebase 
+sab se phle ap git install krene GIT SCM se uske bad ap 
+uske bad ap github desktop ko install krenge . github desktop se 
+uske bad ap Github desktop me application ko upload krdoge . google se signin krke 
+
+Deployment of Create React App :
+ seacrh google.com deployment of create react app 
+ press ctrl+f Github Pages  
+
+ $ npm run build 
+
+ is command se aik build folder banjaega.
+
+ build folder k andar aik static app banjaigi apki 
+
+ aur isko kisi bhi server per jaker host krskte hai .
+
+ Github pages per React Router achi tarah  Use nh hoskta .
+ server per bilkul kam krta hai.
+
+ Deploy Application on Github Pages .
+ 
+  first step 
+ sab se phle ap Add homepage to package.json 
+ homepage wali line ko copy krenge . aur package.josn me paste krdenge .
+ link k and me gihub.io/ k bad ap apni app ka nam denge exacr jo apne github me publish ki hai.
+ 
+ $ {"homepage": "https://myusername.github.io/text-utils"}
+
+ second step 
+
+ aik package ko install krenge .
+
+ $ npm install --save gh-pages
+
+ third  step 
+  package .jons file me scripts me do lines add krni hai .
+
+  fourth step 
+
+  use command 
+
+  $  npm run deploy
+  
+  
+
+
