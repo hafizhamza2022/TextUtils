@@ -264,6 +264,13 @@ Deployment of Create React App :
 
   $  npm run deploy
   
+  Fix Issues On Text Utils:
+
+  hum yh chahte hai k agr hum words kuch na likhe to humare pas o words hi count ho agr hum space bhi de to bhi hamara words count na ho uske lye hum 
+  .filter() krke aik function use krte hai 
+
+  .filter() yh function kya krta hai aik function leta hai agr woh function true return krta hai tabhi woh element array me rhega warna woh element array me nh rhega 
+  
   
 
 

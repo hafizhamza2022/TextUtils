@@ -76,7 +76,12 @@ export default function TextForm(props) {
                 props.mode === "light" ? "#1e2c7ek" : "light"
               }`}
             >
-              {text.split(" ").length - 1} words and {text.length} characters{" "}
+              {
+                text.split(" ").filter((element) => {
+                  return element.length !== 0;
+                }).length
+              }
+              words and {text.length} characters
             </p>
 
             <h3
